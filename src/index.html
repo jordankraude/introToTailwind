@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS & Typescript</title>
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <header class="flex flex-row justify-evenly h-auto pt-10 fixed w-full top-0 bg-black z-50">
+        <img src="../public/images/logo.png" alt="Site Logo" class="mx-auto my-auto pb-5 h-16 w-20">
+        <nav class="w-3/4">
+            <ul class="flex flex-row text-white justify-evenly text-3xl">
+                <a href=""><li>Services</li></a>
+                <a href=""><li>FAQs</li></a>
+                <a href=""><li>Blog</li></a>
+                <a href=""><li>Testimonials</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <div class="relative top-0 h-1 w-screen bg-white z-0"></div> -->
+        <div class="relative top-1 w-2/3 h-2/3 bg-white"></div>
+        <div class="absolute top-40 right-8 h-80 w-3/5 bg-gray-900 bg-opacity-50 rounded-md z-20 text-white bg-blend-color">
+            <h1 class="text-5xl text-center mt-20">A Whole New Outlook on <h1 class="text-6xl text-cyan-300 text-right mr-10">Web Design</h1></h1>
+        </div>
+        <div class="circle-container sticky fadeIn"></div>
+
+
+        <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-7ac78ada-e283-46c4-bb3b-22240cf78e07" data-elfsight-app-lazy></div> -->
+
+        <div class="carousel-container relative">
+            <div class="carousel">
+              <div class="logo"><img src="../public/images/adidas-logo.png" alt="Logo 1"></div>
+              <div class="logo"><img src="../public/images/chatgpt-logo.png" alt="Logo 2"></div>
+              <div class="logo"><img src="../public/images/threads-logo.png" alt="Logo 3"></div>
+              <div class="logo"><img src="../public/images/twitter-x-logo.png" alt="Logo 3"></div>
+              <div class="logo"><img src="../public/images/adidas-logo.png" alt="Logo 1"></div>
+              <div class="logo"><img src="../public/images/chatgpt-logo.png" alt="Logo 2"></div>
+              <div class="logo"><img src="../public/images/threads-logo.png" alt="Logo 3"></div>
+              <div class="logo"><img src="../public/images/twitter-x-logo.png" alt="Logo 3"></div>
+            </div>
+          </div>
+
+        <div class="review w-4/5 m-auto rounded-md bg-gray-900 bg-opacity-50 text-white">
+            <h1>Leave A Review</h1>
+        </div>
+
+    
+    </main>
+
+    <footer>
+        <p id="copyright"></p>
+    </footer>
+</body>
+<script src="input.js"></script>
+</html>

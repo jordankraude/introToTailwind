@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a:hover {color: aqua;}
+
+.review {
+    height: 500px;
+    position: relative;
+    top: 300px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    /* top: -200px; */
+    z-index: 1;
+    position: relative;
+  }
+  
+  .carousel {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap; /* Prevent logos from wrapping to the next line */
+  }
+
+  .fixed-carousel {
+    position: fixed;
+    top: 60px; /* Adjust the top position to account for the header height */
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Make sure the fixed carousel stays above other elements */
+  }
+  
+  .logo {
+    flex: 0 0 25%; /* Each logo takes up 100% of the container */
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: aqua;
+    
+  }
+  
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+  
+
+  
+
+
+
+body {
+    margin: 0;
+
+  }
+  
+  .circle-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* left: -50%; */
+    overflow: hidden;
+  }
+  
+  .circle {
+    position: absolute;
+    background-color: #3498db; /* Choose your circle color */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    bottom: 0;
+    opacity: 0;
+    animation: moveCircle 2s ease-in-out infinite alternate;
+    /* animation: fadeIn 2s ease-in; */
+    transition: opacity 0.5s ease-in-out;
+
+  }
+
+  /* .fadeIn {
+    animation: fadeIn 8s;
+  } */
+  
+
+  
+  /* Add more .circle:nth-child(N) rules for additional circles */
+  
+  @keyframes moveCircle {
+    0% {
+      transform: translate(0%, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -100%);
+      background-color: aqua;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Move the logos to the left */
+    }
+  }
