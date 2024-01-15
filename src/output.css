@@ -606,6 +606,10 @@ video {
   margin-bottom: auto;
 }
 
+.ml-20 {
+  margin-left: 5rem;
+}
+
 .mr-10 {
   margin-right: 2.5rem;
 }
@@ -614,8 +618,12 @@ video {
   margin-top: 5rem;
 }
 
-.block {
-  display: block;
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -732,6 +740,11 @@ video {
   line-height: 1;
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-cyan-300 {
   --tw-text-opacity: 1;
   color: rgb(103 232 249 / var(--tw-text-opacity));
@@ -746,14 +759,77 @@ video {
   background-blend-mode: color;
 }
 
+a {
+  /* transition: color 1s ease; */
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, white, aqua);
+  transition: background-position 2s ease;
+  background-size: 300% 100%;
+}
+
 a:hover {
-  color: aqua;
+  /* color: aqua; */
+  background-position: 100% 0;
 }
 
 .review {
-  height: 500px;
-  position: relative;
-  top: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  max-width: 800px;
+  /* Adjust the maximum width of the form */
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two columns layout */
+  gap: 15px;
+  /* Adjust the gap between form elements */
+}
+
+input,
+      textarea {
+  /* width: 100%; */
+  padding: 8px;
+  box-sizing: border-box;
+  color: black;
+}
+
+label {
+  grid-column: 1/2;
+}
+
+.feedbackLabel {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+input {
+  grid-column: 1/2;
+  height: 48px;
+}
+
+textarea {
+  grid-column: 2/3;
+  grid-row: 2/7;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+button {
+  grid-column: span 2;
+  /* Make the button span two columns */
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+  margin: auto auto;
 }
 
 .carousel-container {
@@ -768,22 +844,18 @@ a:hover {
   display: flex;
   animation: scroll 20s linear infinite;
   white-space: nowrap;
-  /* Prevent logos from wrapping to the next line */
 }
 
 .fixed-carousel {
   position: fixed;
   top: 60px;
-  /* Adjust the top position to account for the header height */
   left: 0;
   width: 100%;
   z-index: 1;
-  /* Make sure the fixed carousel stays above other elements */
 }
 
 .logo {
   flex: 0 0 25%;
-  /* Each logo takes up 100% of the container */
   padding: 10px;
   box-sizing: border-box;
   display: inline-block;
@@ -791,8 +863,8 @@ a:hover {
 }
 
 .logo img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 
 body {
@@ -810,7 +882,6 @@ body {
 .circle {
   position: absolute;
   background-color: #3498db;
-  /* Choose your circle color */
   width: 200px;
   height: 200px;
   border-radius: 50%;

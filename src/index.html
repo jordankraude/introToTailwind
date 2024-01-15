@@ -44,9 +44,26 @@
             </div>
           </div>
 
-        <div class="review w-4/5 m-auto rounded-md bg-gray-900 bg-opacity-50 text-white">
-            <h1>Leave A Review</h1>
+        <h1 class="text-6xl text-white mt-40 ml-20">Leave A Review</h1>
+        <div class="review w-4/5 h-auto m-auto rounded-md bg-gray-900 bg-opacity-50 text-white mt-5">
+
+            <form action="POST">
+                <label for="firstname">First Name:</label>
+                <input type="text" name="firstname" id="firstname" required>
+                
+                <label for="lastname">Last Name:</label>
+                <input type="text" name="lastname" id="lastname" required>
+                
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" required>
+                
+                <label for="feedback" class="feedbackLabel">Feedback:</label>
+                <textarea name="feedback" id="feedback" cols="30" rows="10" required></textarea>
+                
+                <button type="submit" class="bg-white text-black">Submit</button>
+            </form>
         </div>
+        
 
     
     </main>

@@ -2,13 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-a:hover {color: aqua;}
+a {
+    /* transition: color 1s ease; */
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, white, aqua);
+    transition: background-position 2s ease;
+    background-size: 300% 100%;}
 
-.review {
-    height: 500px;
-    position: relative;
-    top: 300px;
-}
+a:hover {
+    /* color: aqua; */
+    background-position: 100% 0;}
+
+    .review {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      
+      form {
+        max-width: 800px; /* Adjust the maximum width of the form */
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns layout */
+        gap: 15px; /* Adjust the gap between form elements */
+      }
+      
+      input,
+      textarea {
+        /* width: 100%; */
+        padding: 8px;
+        box-sizing: border-box;
+        color: black;
+      }
+      label {grid-column: 1/2;}
+      .feedbackLabel {grid-column: 2/3;
+    grid-row: 1/2;}
+      input {grid-column: 1/2;
+    height: 48px;}
+      textarea {
+        grid-column: 2/3;
+        grid-row: 2/7;
+        height: fit-content;
+      }
+      
+      button {
+        grid-column: span 2; /* Make the button span two columns */
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        text-align: center;
+        margin: auto auto;
+      }
+
 
 .carousel-container {
     overflow: hidden;
@@ -21,19 +69,19 @@ a:hover {color: aqua;}
   .carousel {
     display: flex;
     animation: scroll 20s linear infinite;
-    white-space: nowrap; /* Prevent logos from wrapping to the next line */
+    white-space: nowrap;
   }
 
   .fixed-carousel {
     position: fixed;
-    top: 60px; /* Adjust the top position to account for the header height */
+    top: 60px;
     left: 0;
     width: 100%;
-    z-index: 1; /* Make sure the fixed carousel stays above other elements */
+    z-index: 1;
   }
   
   .logo {
-    flex: 0 0 25%; /* Each logo takes up 100% of the container */
+    flex: 0 0 25%;
     padding: 10px;
     box-sizing: border-box;
     display: inline-block;
@@ -42,8 +90,8 @@ a:hover {color: aqua;}
   }
   
   .logo img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
   }
   
 
@@ -66,7 +114,7 @@ body {
   
   .circle {
     position: absolute;
-    background-color: #3498db; /* Choose your circle color */
+    background-color: #3498db;
     width: 200px;
     height: 200px;
     border-radius: 50%;
